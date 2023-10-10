@@ -1,23 +1,23 @@
-import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem'
-import React, { Component } from 'react'
+import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem'
+
 import css from './ImageGallery.module.css'
 
-export default class ImageGallery extends Component {
+export const ImageGallery = ({images, onClick})=> {
 
-  render() {
+ 
     return (
        <ul className= {css.gallery}>
-        {this.props.images.map(image => {
+        {images.map(image => {
           return (
             <ImageGalleryItem
               key={`${image.id}`}
               image={image.webformatURL}
               largeImage={image.largeImageURL}
-              onClick = {this.props.onClick}
+              onClick = {onClick}
             />
           )
         })}
       </ul>
     )
   }
-}
+

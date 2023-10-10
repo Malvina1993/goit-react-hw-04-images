@@ -1,17 +1,18 @@
-import React, { Component } from 'react'
+
 import css from './Modal.module.css'
-export default class Modal extends Component {
-  render() {
+export const Modal = ({onClick, image, largeImage}) => {
+  
     return (
-      <div>
+      <div >
         <div
           className={css.overlay}
-          onClick={(e) => {this.props.onClick(e)}}
+          onClick={(e) => { onClick(e) }}
+          
         >
           <div className={css.modal}>
             <img
-              src={this.props.image}  
-              alt={this.props.largeImage}
+              src={image}  
+              alt={largeImage}
               
             />
           </div>
@@ -19,4 +20,4 @@ export default class Modal extends Component {
       </div>
     )
   }
-}
+

@@ -1,19 +1,19 @@
-import React, { Component } from 'react'
+
 import css from './ImageGalleruItem.module.css'
 
-export default class ImageGalleryItem extends Component {
+export const ImageGalleryItem = ({image,largeImage,onClick})=> {
 
 
-  render() {
+
     return (
       <li className={css.galleryItem} >
         <img 
-          src={this.props.image}  
-          alt={this.props.largeImage} 
+          src={image}  
+          alt={largeImage} 
           className={ css.galleryImage}
-          onClick={() => { this.props.onClick(this.props.image, this.props.largeImage) }}
+          onClick={() => { onClick(image, largeImage) }}
         />
       </li>
     )
   }
-}
+

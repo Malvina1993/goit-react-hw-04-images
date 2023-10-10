@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+
 import { Hourglass } from 'react-loader-spinner'
 
 
-export default class Loader extends Component {
-  render() {
+export const Loader = () => {
+ 
     return (
       <div>
         <Hourglass
@@ -18,4 +18,4 @@ export default class Loader extends Component {
       </div>
     )
   }
-}
+
